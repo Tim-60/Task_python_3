@@ -17,7 +17,7 @@ list[int]: Список целых чисел, извлечённых из *args
 str: Строка, представляющая либо объединённые *args (при search="args" и status == False), либо пары ключ-значение для **kwargs (при search="kwargs").
 None: В случае возникновения исключения.
 Исключения:
-        ValueError: происходит в случае, если значение параметра search не равно ни "args", ни "kwargs".
+        ValueError: Если search не равно "args" или "kwargs".
     """
     result: list[int] = []
     result_2: str = ""

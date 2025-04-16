@@ -1,4 +1,4 @@
-def function_name(search: str, status: bool, *args: object, **kwargs: object) -> list[int] | str:
+def function_name(search: str, status: bool, *args: tuple, **kwargs: dict) -> list[int] | str:
     """
 Функция динамически обрабатывает аргументы, возвращая различные результаты в зависимости от значений search и status.
 Некорректное значение search вызывает исключение.
@@ -10,8 +10,8 @@ def function_name(search: str, status: bool, *args: object, **kwargs: object) ->
 Аргументы:
 search (str): Определяет тип обрабатываемых аргументов ("args" для позиционных, "kwargs" для именованных).
 status (bool): Определяет формат вывода позиционных аргументов. Имеет значение только когда search="args".
-*args (object): Позиционные аргументы.
-**kwargs (object): Именованные аргументы.
+*args (tuple): Позиционные аргументы.
+**kwargs (dict): Именованные аргументы.
 Возвращает:
 list[int]: Список целых чисел, извлечённых из *args (при search="args" и status == True).
 str: Строка, представляющая либо объединённые *args (при search="args" и status == False), либо пары ключ-значение для **kwargs (при search="kwargs").
